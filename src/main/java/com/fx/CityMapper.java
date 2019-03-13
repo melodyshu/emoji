@@ -9,4 +9,5 @@ public interface CityMapper {
     @Select("select * from city where id = #{id}")
     public City selectById2(int id);
     public List<City> selectAll();
+    public void insertOne(String name);
 }

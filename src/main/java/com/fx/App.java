@@ -19,12 +19,9 @@ public class App {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         CityMapper cityMapper = sqlSession.getMapper(CityMapper.class);
-        City city = cityMapper.selectById(1);
-        System.out.println(city);
-        City city2 = cityMapper.selectById2(2);
-        System.out.println(city2);
-        List<City> cityList = cityMapper.selectAll();
-        System.out.println(cityList);
+        String grinningFace = "😀";
+        cityMapper.insertOne(grinningFace);
+        sqlSession.commit();
         sqlSession.close();
     }
 }

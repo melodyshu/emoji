@@ -10,4 +10,8 @@
    <select id="selectAll" resultType="city">
     select * from city
    </select>
+
+    <insert id="insertOne">
+        insert into city(name) values(#{name})
+    </insert>
 </mapper>
